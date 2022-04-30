@@ -3,15 +3,15 @@
 - Additionally, stress tests are added by means of the k6 tool.
 
 # Requirements
-- Docker
-- Kubernetes
-- Minikube or kind
-- Knative
-- K6
+- Docker [https://docs.docker.com/engine/install/ubuntu/]
+- Kubernetes [https://kubernetes.io/docs/tasks/tools/]
+- Minikube or kind [https://minikube.sigs.k8s.io/docs/start/]
+- Knative [https://knative.dev/docs/install/]
+- K6 [https://k6.io/docs/getting-started/installation/]
 
 # How to run
 ## Knative Deploy
-### Service 100% Traffic
+### 1. Service 100% Traffic
 To run the application you only need to download the content of the source code and run the script:
 
     kubectl apply -f service.yaml
@@ -20,7 +20,7 @@ This command will create a satisfactory response that the service has been creat
 
     kn service list
 
-### Service 50% Traffic - Two versions
+### 2. Service 50% Traffic - Two versions
 To run the application you need to do previously the "100% Traffic", after that you need to execute the following line of code:
 
     kubectl apply -f TrafficSplit.yaml
@@ -38,7 +38,7 @@ Two additional endpoints can be tested which would be /home /hello:
 - http://microservice-app.default.{IP-Address}.sslip.io/hello
 - http://microservice-app.default.{IP-Address}.sslip.io/home
 
-## K6 Test
+## 3. K6 Test
 
 To run the stress tests performed in K6, we enter to modify the file k6-test.js in line 10, 11 and 12 with the url of the local service previously uploaded.
 
