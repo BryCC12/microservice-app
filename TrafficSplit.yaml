@@ -1,0 +1,22 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: microservice-app
+spec:
+  template:
+    spec: 
+      containers:
+        - image: docker.io/brycc12/microservice-app
+          ports:
+            - containerPort: 8080
+          env:
+            - name: NAME
+              value: "Bry"
+            - name: SERVICE
+              value: "Knative V2"
+  traffic:
+  - latestRevision: true
+    percent: 50
+  - latestRevision: false
+    percent: 50
+    revisionName: microservice-app-00001

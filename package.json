@@ -1,0 +1,21 @@
+{
+  "name": "Microservicio con Knative",
+  "version": "1.0.0",
+  "description": "Microservicio con NodeJs - Express",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "knative",
+    "kubernetes"
+  ],
+  "author": "Brayan Caicedo",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.1"
+  }
+}
