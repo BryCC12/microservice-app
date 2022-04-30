@@ -1,8 +1,8 @@
 # Ignora archivos del proyecto  
-app.js
-package.json
-package-lock.json
+.app.js
+.package.json
+.package-lock.json
 
 # Ignora la carpeta node_modules y src
-node_modules
-src
+node_modules/
+src/
