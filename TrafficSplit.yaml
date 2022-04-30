@@ -11,9 +11,9 @@ spec:
             - containerPort: 8080
           env:
             - name: NAME
-              value: "Bry"
+              value: "Knative"
             - name: SERVICE
-              value: "Knative V2"
+              value: "Microservice V2"
   traffic:
   - latestRevision: true
     percent: 50
